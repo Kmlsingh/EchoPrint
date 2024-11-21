@@ -1,0 +1,11 @@
+Model Information:
+* title:	Coffe Cup (Big)
+* source:	https://sketchfab.com/3d-models/coffe-cup-big-6c45882185ef453f9af3e0edc84c0a93
+* author:	Sandeep Agarwal (https://sketchfab.com/Sandeep7487)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Coffe Cup (Big)" (https://sketchfab.com/3d-models/coffe-cup-big-6c45882185ef453f9af3e0edc84c0a93) by Sandeep Agarwal (https://sketchfab.com/Sandeep7487) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
