@@ -31,8 +31,8 @@ const Lotus = ({file, isMobile }) => {
       {/* <pointLight position={[10, 10, 10]} intensity={0.5} color='orange' /> */}
       <primitive
         object={object.scene}
-        scale={isMobile ? 4.5 : 3.1}
-        position={isMobile ? [0, -2.5, -1.5] : [0, 0, -1.0]}
+        scale={isMobile ? 2.5 : 3.1}
+        position={isMobile ? [0, -1.3, -1.5] : [0, 0, -1.0]}
         rotation={isMobile ? [-0.05, 1.2, 0] : [-0.05, 1.2, 0]}
         // style={isMobile ? {width: "80vw", height: "60vh"}:{ width: "40vw", height: "40vh", padding: "10px" }} // Set the width to 100% of the viewport width
 
@@ -62,24 +62,27 @@ const LotusCanvas = ({ file }) => {
 
   return (
     <Canvas
-      style={{ width: "25vw", height: "30vh" }}
-      frameloop="demand"
-      shadows
-      dpr={[1, 2]}
-      camera={{ position: [20, 3, 5], fov: 25 }}
-      gl={{ preserveDrawingBuffer: true }}
-    >
-      <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls
-          autoRotate
-          enableZoom={false}
-          maxPolarAngle={Math.PI / 2}
-          minPolarAngle={Math.PI / 2}
-        />
-        <Lotus file={file} isMobile={isMobile} />
-      </Suspense>
-      <Preload all />
-    </Canvas>
+    style={{
+      width: isMobile ? "80vw" : "25vw", // Increased width for mobile
+      height: isMobile ? "50vh" : "30vh", // Adjust height as needed
+    }}
+    frameloop="demand"
+    shadows
+    dpr={[1, 2]}
+    camera={{ position: [20, 3, 5], fov: 25 }}
+    gl={{ preserveDrawingBuffer: true }}
+  >
+    <Suspense fallback={<CanvasLoader />}>
+      <OrbitControls
+        autoRotate
+        enableZoom={false}
+        maxPolarAngle={Math.PI / 2}
+        minPolarAngle={Math.PI / 2}
+      />
+      <Lotus file={file} isMobile={isMobile} />
+    </Suspense>
+    <Preload all />
+  </Canvas>
   );
 };
 
